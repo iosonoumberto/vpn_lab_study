@@ -1,5 +1,5 @@
 <configuration-text>
-## Last changed: 2020-12-03 08:56:32 PST
+## Last changed: 2020-12-03 09:04:54 PST
 version 17.2R2.5;
 groups {
     re0 {
@@ -363,7 +363,7 @@ routing-instances {
                 }
                 sham-link local 1.1.1.11;
                 area 0.0.0.0 {
-                    sham-link-remote 5.5.5.55 metric 1;
+                    sham-link-remote 5.5.5.55 metric 7;
                     interface ge-0/0/0.0 {
                         interface-type p2p;
                     }

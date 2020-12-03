@@ -144,7 +144,7 @@ set routing-instances noodles vrf-table-label
 set routing-instances noodles protocols ospf traceoptions file vpnospftr
 set routing-instances noodles protocols ospf traceoptions flag all
 set routing-instances noodles protocols ospf sham-link local 1.1.1.11
-set routing-instances noodles protocols ospf area 0.0.0.0 sham-link-remote 5.5.5.55 metric 1
+set routing-instances noodles protocols ospf area 0.0.0.0 sham-link-remote 5.5.5.55 metric 7
 set routing-instances noodles protocols ospf area 0.0.0.0 interface ge-0/0/0.0 interface-type p2p
 set routing-instances noodles protocols ospf area 0.0.0.0 interface lo0.1
 </configuration-set>
