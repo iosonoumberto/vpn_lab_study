@@ -1,5 +1,5 @@
 <configuration-text>
-## Last changed: 2020-12-03 07:36:38 PST
+## Last changed: 2020-12-03 07:46:38 PST
 version 17.2R2.5;
 groups {
     re0 {
@@ -331,6 +331,16 @@ policy-options {
         }
         then reject;
     }
+    policy-statement noodles-ospf-exp {
+        term remote {
+            from {
+                protocol bgp;
+                community noodles;
+            }
+            then accept;
+        }
+        then reject;
+    }
     community noodles members target:100:1;
 }
 routing-instances {
@@ -343,6 +353,7 @@ routing-instances {
         vrf-table-label;
         protocols {
             ospf {
+                export noodles-ospf-exp;
                 area 0.0.0.0 {
                     interface ge-0/0/0.0 {
                         interface-type p2p;
